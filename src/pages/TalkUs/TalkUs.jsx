@@ -1,3 +1,5 @@
+import CTASection from "../../components/CTASection";
+
 export default function TalkUs() {
   return (
     <>
@@ -15,7 +17,7 @@ export default function TalkUs() {
       </section>
 
       {/* Contact Form and Info */}
-      <section class="contact-section">
+      <section id="talk" class="contact-section">
         <div class="container">
           <div class="contact-grid">
             <div class="contact-form-container">
@@ -241,24 +243,21 @@ export default function TalkUs() {
       </section>
 
       {/* CTA Section  */}
-      {/* TODO: Criar compomente */}
-      <section class="cta">
-        <div class="container">
-          <h2>Pronto para transformar sua produção agrícola?</h2>
-          <p>
-            Entre em contato hoje mesmo e descubra como nossas soluções podem
-            ajudar a otimizar sua operação.
-          </p>
-          <div class="cta-buttons">
-            <a href="#" class="btn btn-light">
-              Agendar Demonstração
-            </a>
-            <a href="#" class="btn btn-outline-light">
-              Conhecer Planos
-            </a>
-          </div>
+      <CTASection
+        title={"Pronto para transformar sua produção agrícola?"}
+        description={
+          "Entre em contato hoje mesmo e descubra como nossas soluções podem ajudar a otimizar sua operação."
+        }
+      >
+        <div class="cta-buttons">
+          <a href="#talk" class="btn btn-light">
+            Agendar Demonstração
+          </a>
+          <a href="product" class="btn btn-outline-light">
+            Conhecer Planos
+          </a>
         </div>
-      </section>
+      </CTASection>
     </>
   );
 }
