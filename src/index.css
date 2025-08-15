@@ -178,14 +178,18 @@ a.btn-mobile {
   gap: 2rem;
 }
 
-.main-nav a {
+.main-nav li {
   color: var(--color-primary-light);
   font-weight: 500;
   font-size: 1rem;
 }
 
+.main-nav .link {
+  color: var(--color-primary-light);
+}
+
 .main-nav a:hover,
-.main-nav a.active {
+.main-nav .link-active {
   color: var(--color-secondary);
 }
 
