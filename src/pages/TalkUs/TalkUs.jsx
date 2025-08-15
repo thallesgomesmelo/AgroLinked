@@ -1,20 +1,15 @@
 import CTASection from "../../components/CTASection";
+import SubHeader from "../../components/SubHeader";
 
 export default function TalkUs() {
   return (
     <>
-      {/* TODO: Criar compomente */}
-      <section class="page-hero">
-        <div class="container">
-          <div class="page-hero-content">
-            <h1>Fale Conosco</h1>
-            <p>
-              Estamos prontos para ajudar. Entre em contato conosco para saber
-              mais sobre nossas soluções ou para agendar uma demonstração.
-            </p>
-          </div>
-        </div>
-      </section>
+      <SubHeader
+        title={"Fale Conosco"}
+        description={
+          "Estamos prontos para ajudar. Entre em contato conosco para saber mais sobre nossas soluções ou para agendar uma demonstração."
+        }
+      />
 
       {/* Contact Form and Info */}
       <section id="talk" class="contact-section">
