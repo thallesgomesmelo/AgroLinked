@@ -1,5 +1,5 @@
-import '../../index.css'
-import '../../mediaquery.css'
+import "../../index.css";
+import "../../mediaquery.css";
 
 export default function Footer() {
     return (
@@ -10,25 +10,43 @@ export default function Footer() {
                         <div class="footer-col">
                             <h3>AgroLinked</h3>
                             <p>
-                                Transformando o agronegócio com soluções tecnológicas inovadoras e
-                                sustentáveis.
+                                Transformando o agronegócio com soluções
+                                tecnológicas inovadoras e sustentáveis.
                             </p>
                             <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
                             </div>
                         </div>
 
                         <div class="footer-col">
                             <h3>Links Rápidos</h3>
                             <ul>
-                                <li><a href="index.html">Início</a></li>
-                                <li><a href="produto.html">Produto</a></li>
-                                <li><a href="beneficios.html">Benefícios</a></li>
-                                <li><a href="sobre.html">Sobre Nós</a></li>
-                                <li><a href="contato.html">Fale Conosco</a></li>
+                                <li>
+                                    <a href="index.html">Início</a>
+                                </li>
+                                <li>
+                                    <a href="produto.html">Produto</a>
+                                </li>
+                                <li>
+                                    <a href="beneficios.html">Benefícios</a>
+                                </li>
+                                <li>
+                                    <a href="sobre.html">Sobre Nós</a>
+                                </li>
+                                <li>
+                                    <a href="contato.html">Fale Conosco</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -37,10 +55,11 @@ export default function Footer() {
                             <ul class="contact-info">
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <span
-                                    >Av. Tecnologia Verde, 1234<br />São Paulo, SP -
-                                        01234-567</span
-                                    >
+                                    <span>
+                                        Av. Tecnologia Verde, 1234
+                                        <br />
+                                        São Paulo, SP - 01234-567
+                                    </span>
                                 </li>
                                 <li>
                                     <i class="fas fa-phone"></i>
@@ -56,11 +75,15 @@ export default function Footer() {
                         <div class="footer-col">
                             <h3>Newsletter</h3>
                             <p>
-                                Inscreva-se para receber novidades e atualizações sobre nossas
-                                soluções.
+                                Inscreva-se para receber novidades e
+                                atualizações sobre nossas soluções.
                             </p>
                             <form class="newsletter-form">
-                                <input type="email" placeholder="Seu e-mail" required />
+                                <input
+                                    type="email"
+                                    placeholder="Seu e-mail"
+                                    required
+                                />
                                 <button type="submit">Inscrever-se</button>
                             </form>
                         </div>
@@ -68,12 +91,12 @@ export default function Footer() {
 
                     <div class="footer-bottom">
                         <p>
-                            &copy; <span id="currentYear"></span> AgroLinked. Todos os direitos
-                            reservados.
+                            &copy; <span id="currentYear"></span> AgroLinked.
+                            Todos os direitos reservados.
                         </p>
                     </div>
                 </div>
             </footer>
         </>
-    )
+    );
 }
