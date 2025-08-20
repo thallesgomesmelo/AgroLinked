@@ -1,7 +1,65 @@
+import { useState } from "react";
+
+import "./TalkUs.css";
+
 import CTASection from "../../components/CTASection";
 import SubHeader from "../../components/SubHeader";
 
 export default function TalkUs() {
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [errors, setErros] = useState({});
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
+  const validateForm = () => {
+    let newErrors = {};
+
+    if (!formData.name) newErrors.name = "Nome é obrigatório.";
+
+    if (!formData.email) {
+      newErrors.email = "E-mail é obrigatório.";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Digite um e-mail válido.";
+    }
+
+    if (formData.phone === "") {
+      newErrors.phone = "Telefone é obrigatório.";
+    } else if (
+      !/^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}\-[0-9]{4}$/.test(formData.phone)
+    ) {
+      newErrors.phone = "Digite um telefone válido.";
+    }
+
+    return newErrors;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const validationErrors = validateForm();
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErros(validationErrors);
+      return;
+    }
+
+    setErros({});
+
+    fetch("https://formsubmit.co/agroliked@gmail.com", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => {
+        console.log("Resposta do servidor de email: \n", res);
+      })
+      .catch((error) => {
+        console.log("Erro ao enviar formulário: \n", error);
+      });
+  };
+
   return (
     <>
       <SubHeader
@@ -38,8 +96,7 @@ export default function TalkUs() {
                 <form
                   id="contactForm"
                   class="contact-form"
-                  action="https://formsubmit.co/agroliked@gmail.com"
-                  method="POST"
+                  onSubmit={handleSubmit}
                 >
                   <div class="form-group">
                     <label for="name">Nome Completo</label>
@@ -48,8 +105,12 @@ export default function TalkUs() {
                       id="input-name"
                       name="name"
                       placeholder="Seu nome completo"
+                      value={formData.name}
+                      onChange={handleChange}
                     />
-                    <span id="error-name"></span>
+                    {errors.name && (
+                      <span className="form-erro">{errors.name}</span>
+                    )}
                   </div>
 
                   <div class="form-group">
@@ -59,8 +120,12 @@ export default function TalkUs() {
                       id="input-email"
                       name="email"
                       placeholder="seu.email@exemplo.com"
+                      value={formData.email}
+                      onChange={handleChange}
                     />
-                    <span id="error-email"></span>
+                    {errors.email && (
+                      <span className="form-erro">{errors.email}</span>
+                    )}
                   </div>
 
                   <div class="form-group">
@@ -70,8 +135,12 @@ export default function TalkUs() {
                       id="input-phone"
                       name="phone"
                       placeholder="(00) 00000-0000"
+                      value={formData.phone}
+                      onChange={handleChange}
                     />
-                    <span id="error-phone"></span>
+                    {errors.phone && (
+                      <span className="form-erro">{errors.phone}</span>
+                    )}
                   </div>
 
                   <div class="form-group">
@@ -82,7 +151,6 @@ export default function TalkUs() {
                       placeholder="Como podemos ajudar?"
                       rows="5"
                     ></textarea>
-                    <span id="error-message"></span>
                   </div>
 
                   <button
