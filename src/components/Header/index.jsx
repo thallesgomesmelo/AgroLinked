@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoverde from "../../assets/logoverde.jpg";
 import "../../index.css";
 import "../../mediaquery.css";
 
 export default function Header() {
+    const location = useLocation()
+
     return (
         <header className="header">
             <div className="container">
@@ -22,21 +24,44 @@ export default function Header() {
                     <nav className="main-nav">
                         <ul>
                             <li>
-                                <Link to="/">Início</Link>
+                                <Link
+                                    to="/"
+                                    className={location.pathname === "/" ? "active" : ""}
+                                >
+                                    Início
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/product" className="active">
+                                <Link
+                                    to="/produto"
+                                    className={location.pathname === "/produto" ? "active" : ""}
+                                >
                                     Produto
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/beneficios">Benefícios</Link>
+                                <Link
+                                    to="/beneficios"
+                                    className={location.pathname === "/beneficios" ? "active" : ""}
+                                >
+                                    Benefícios
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/sobre">Sobre Nós</Link>
+                                <Link
+                                    to="/sobre"
+                                    className={location.pathname === "/sobre" ? "active" : ""}
+                                >
+                                    Sobre Nós
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/contato">Fale Conosco</Link>
+                                <Link
+                                    to="/contato"
+                                    className={location.pathname === "/contato" ? "active" : ""}
+                                >
+                                    Fale Conosco
+                                </Link>
                             </li>
                         </ul>
                     </nav>

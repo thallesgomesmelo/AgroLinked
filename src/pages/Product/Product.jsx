@@ -1,4 +1,4 @@
-import Tabs from "../../components/Tabs";
+import TabProduct from "../../components/Tabs/sectionProduct";
 import "../../index.css";
 import "../../mediaquery.css";
 
@@ -122,7 +122,7 @@ export default function Product() {
                     </div>
 
                     <div class="tabs">
-                        <Tabs />
+                        <TabProduct />
                     </div>
                 </div>
             </section>

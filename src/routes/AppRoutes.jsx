@@ -8,7 +8,7 @@ export default function AppRoutes() {
         <BrowserRouter>
             <MainLayout>
                 <Routes>
-                    <Route path="/product" element={<Product />} />
+                    <Route path="/produto" element={<Product />} />
                     <Route path="/beneficios" element={<Beneficios />} />
                 </Routes>
             </MainLayout>

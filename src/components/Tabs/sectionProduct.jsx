@@ -1,7 +1,7 @@
 import "../../index.css";
 import { useState } from "react";
 
-export default function Tab() {
+export default function TabProduct() {
     const [activeTab, setActiveTab] = useState("dashboard");
 
     return (
