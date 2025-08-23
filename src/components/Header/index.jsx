@@ -5,7 +5,7 @@ import "../../index.css";
 import "../../mediaquery.css";
 
 export default function Header() {
-    const location = useLocation()
+    const location = useLocation();
 
     return (
         <header className="header">
@@ -26,7 +26,11 @@ export default function Header() {
                             <li>
                                 <Link
                                     to="/"
-                                    className={location.pathname === "/" ? "active" : ""}
+                                    className={
+                                        location.pathname === "/"
+                                            ? "active"
+                                            : ""
+                                    }
                                 >
                                     Início
                                 </Link>
@@ -34,7 +38,11 @@ export default function Header() {
                             <li>
                                 <Link
                                     to="/produto"
-                                    className={location.pathname === "/produto" ? "active" : ""}
+                                    className={
+                                        location.pathname === "/produto"
+                                            ? "active"
+                                            : ""
+                                    }
                                 >
                                     Produto
                                 </Link>
@@ -42,7 +50,11 @@ export default function Header() {
                             <li>
                                 <Link
                                     to="/beneficios"
-                                    className={location.pathname === "/beneficios" ? "active" : ""}
+                                    className={
+                                        location.pathname === "/beneficios"
+                                            ? "active"
+                                            : ""
+                                    }
                                 >
                                     Benefícios
                                 </Link>
@@ -50,15 +62,23 @@ export default function Header() {
                             <li>
                                 <Link
                                     to="/sobre"
-                                    className={location.pathname === "/sobre" ? "active" : ""}
+                                    className={
+                                        location.pathname === "/sobre"
+                                            ? "active"
+                                            : ""
+                                    }
                                 >
                                     Sobre Nós
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    to="/contato"
-                                    className={location.pathname === "/contato" ? "active" : ""}
+                                    to="/talkus"
+                                    className={
+                                        location.pathname === "/talkus"
+                                            ? "active"
+                                            : ""
+                                    }
                                 >
                                     Fale Conosco
                                 </Link>
