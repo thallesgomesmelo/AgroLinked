@@ -1,4 +1,29 @@
 import RetornoImg from "../../assets/Retorno.png";
+import ROIStat from "./ROIStat";
+import ROICalcButton from "./ROICalcButton";
+
+const stats = [
+    {
+        number: "30%",
+        title: "Aumento de Produtividade",
+        description: "Maior rendimento por hectare",
+    },
+    {
+        number: "25%",
+        title: "Redução de Custos",
+        description: "Menor gasto com insumos",
+    },
+    {
+        number: "40%",
+        title: "Economia de Água",
+        description: "Irrigação mais eficiente",
+    },
+    {
+        number: "20%",
+        title: "Redução de Perdas",
+        description: "Menor perda por pragas e doenças",
+    },
+];
 
 export default function ROISection() {
     return (
@@ -15,42 +40,17 @@ export default function ROISection() {
                         </p>
 
                         <div className="roi-stats">
-                            <div className="roi-stat">
-                                <div className="roi-stat-number">30%</div>
-                                <div className="roi-stat-text">
-                                    <h3>Aumento de Produtividade</h3>
-                                    <p>Maior rendimento por hectare</p>
-                                </div>
-                            </div>
-
-                            <div className="roi-stat">
-                                <div className="roi-stat-number">25%</div>
-                                <div className="roi-stat-text">
-                                    <h3>Redução de Custos</h3>
-                                    <p>Menor gasto com insumos</p>
-                                </div>
-                            </div>
-
-                            <div className="roi-stat">
-                                <div className="roi-stat-number">40%</div>
-                                <div className="roi-stat-text">
-                                    <h3>Economia de Água</h3>
-                                    <p>Irrigação mais eficiente</p>
-                                </div>
-                            </div>
-
-                            <div className="roi-stat">
-                                <div className="roi-stat-number">20%</div>
-                                <div className="roi-stat-text">
-                                    <h3>Redução de Perdas</h3>
-                                    <p>Menor perda por pragas e doenças</p>
-                                </div>
-                            </div>
+                            {stats.map((stat, idx) => (
+                                <ROIStat
+                                    key={idx}
+                                    number={stat.number}
+                                    title={stat.title}
+                                    description={stat.description}
+                                />
+                            ))}
                         </div>
 
-                        <a href="#" className="btn btn-primary">
-                            Calcular seu ROI
-                        </a>
+                        <ROICalcButton />
                     </div>
                     <div className="roi-image">
                         <img

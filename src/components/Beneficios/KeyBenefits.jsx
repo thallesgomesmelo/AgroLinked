@@ -1,26 +1,29 @@
 import BenefitsCard from "./BenefitsCard";
 
+const benefits = [
+    {
+        header: "Aumento de Produtividade",
+        iconClass: "fas fa-percentage",
+        text: "Aumente sua produtividade em até 30% com decisões baseadas em dados precisos e recomendações personalizadas.",
+    },
+    {
+        header: "Redução de Custos",
+        iconClass: "fas fa-dollar-sign",
+        text: "Otimize o uso de recursos como água, fertilizantes e defensivos, reduzindo custos operacionais em até 25%.",
+    },
+    {
+        header: "Sustentabilidade",
+        iconClass: "fas fa-leaf",
+        text: "Promova práticas agrícolas mais sustentáveis,reduzindo o impacto ambiental e preservando recursos naturais.",
+    },
+    {
+        header: "Economia de Tempo",
+        iconClass: "fas fa-clock",
+        text: "Automatize processos e reduza o tempo gasto em monitoramento manual e tomada de decisões.",
+    },
+];
+
 export default function KeyBenefits() {
-    const iconsClasses = [
-        "fas fa-percentage",
-        "fas fa-dollar-sign",
-        "fas fa-leaf",
-        "fas fa-clock",
-    ];
-
-    const headers = [
-        "Aumento de Produtividade",
-        "Redução de Custos",
-        "Sustentabilidade",
-        "Economia de Tempo",
-    ];
-
-    const texts = [
-        "Aumente sua produtividade em até 30% com decisões baseadas em dados precisos e recomendações personalizadas.",
-        "Otimize o uso de recursos como água, fertilizantes e defensivos, reduzindo custos operacionais em até 25%.",
-        "Promova práticas agrícolas mais sustentáveis,reduzindo o impacto ambiental e preservando recursos naturais.",
-        "Automatize processos e reduza o tempo gasto em monitoramento manual e tomada de decisões.",
-    ];
     return (
         <section className="key-benefits">
             <div className="container">
@@ -32,12 +35,12 @@ export default function KeyBenefits() {
                     </p>
                 </div>
                 <div className="benefits-grid">
-                    {headers.map((header, i) => (
+                    {benefits.map((benefit, i) => (
                         <BenefitsCard
                             key={i}
-                            header={header}
-                            iconClass={iconsClasses[i]}
-                            text={texts[i]}
+                            header={benefit.header}
+                            iconClass={benefit.iconClass}
+                            text={benefit.text}
                         />
                     ))}
                 </div>
