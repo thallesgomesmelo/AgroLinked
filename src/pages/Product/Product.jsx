@@ -5,9 +5,9 @@ import "../../mediaquery.css";
 export default function Product() {
     return (
         <main>
-            <section class="page-hero">
-                <div class="container">
-                    <div class="page-hero-content">
+            <section className="page-hero">
+                <div className="container">
+                    <div className="page-hero-content">
                         <h1>
                             AgroSense: Plataforma Inteligente para o Agronegócio
                         </h1>
@@ -16,23 +16,23 @@ export default function Product() {
                             análise de dados e inteligência artificial para
                             otimizar sua produção agrícola.
                         </p>
-                        <a href="#" class="btn btn-primary">
+                        <a href="#" className="btn btn-primary">
                             Solicitar Demonstração
                         </a>
                     </div>
                 </div>
             </section>
 
-            <section class="product-overview">
-                <div class="container">
-                    <div class="product-overview-content">
-                        <div class="product-image">
+            <section className="product-overview">
+                <div className="container">
+                    <div className="product-overview-content">
+                        <div className="product-image">
                             <img
                                 src="src\assets\AgroSense.png"
                                 alt="Plataforma AgroSense"
                             />
                         </div>
-                        <div class="product-info">
+                        <div className="product-info">
                             <h2>O que é o AgroSense?</h2>
                             <p>
                                 O AgroSense é uma plataforma completa de gestão
@@ -43,7 +43,7 @@ export default function Product() {
                                 inteligência artificial para fornecer insights
                                 precisos e recomendações personalizadas.
                             </p>
-                            <ul class="check-list">
+                            <ul className="check-list">
                                 <li>
                                     Monitoramento em tempo real de condições
                                     climáticas, umidade do solo e saúde das
@@ -67,9 +67,9 @@ export default function Product() {
                 </div>
             </section>
 
-            <section class="how-it-works">
-                <div class="container">
-                    <div class="section-header">
+            <section className="how-it-works">
+                <div className="container">
+                    <div className="section-header">
                         <h2>Como Funciona</h2>
                         <p>
                             Entenda o funcionamento da nossa plataforma e como
@@ -77,9 +77,9 @@ export default function Product() {
                         </p>
                     </div>
 
-                    <div class="steps-container">
-                        <div class="step-card">
-                            <div class="step-number">1</div>
+                    <div className="steps-container">
+                        <div className="step-card">
+                            <div className="step-number">1</div>
                             <h3>Coleta de Dados</h3>
                             <p>
                                 Sensores IoT instalados estrategicamente em sua
@@ -88,8 +88,8 @@ export default function Product() {
                             </p>
                         </div>
 
-                        <div class="step-card">
-                            <div class="step-number">2</div>
+                        <div className="step-card">
+                            <div className="step-number">2</div>
                             <h3>Processamento e Análise</h3>
                             <p>
                                 Nossa plataforma processa os dados coletados
@@ -98,8 +98,8 @@ export default function Product() {
                             </p>
                         </div>
 
-                        <div class="step-card">
-                            <div class="step-number">3</div>
+                        <div className="step-card">
+                            <div className="step-number">3</div>
                             <h3>Recomendações Personalizadas</h3>
                             <p>
                                 Receba recomendações específicas para sua
@@ -111,9 +111,9 @@ export default function Product() {
                 </div>
             </section>
 
-            <section class="platform-features">
-                <div class="container">
-                    <div class="section-header">
+            <section className="platform-features">
+                <div className="container">
+                    <div className="section-header">
                         <h2>Recursos da Plataforma</h2>
                         <p>
                             Explore os principais recursos do AgroSense e como
@@ -121,15 +121,15 @@ export default function Product() {
                         </p>
                     </div>
 
-                    <div class="tabs">
+                    <div className="tabs">
                         <TabProduct />
                     </div>
                 </div>
             </section>
 
-            <section class="platforms">
-                <div class="container">
-                    <div class="section-header">
+            <section className="platforms">
+                <div className="container">
+                    <div className="section-header">
                         <h2>Disponível em Todas as Plataformas</h2>
                         <p>
                             Acesse o AgroSense de qualquer lugar, em qualquer
@@ -138,10 +138,10 @@ export default function Product() {
                         </p>
                     </div>
 
-                    <div class="platforms-grid">
-                        <div class="platform-card">
-                            <div class="platform-icon">
-                                <i class="fas fa-desktop"></i>
+                    <div className="platforms-grid">
+                        <div className="platform-card">
+                            <div className="platform-icon">
+                                <i className="fas fa-desktop"></i>
                             </div>
                             <h3>Versão Web</h3>
                             <p>
@@ -151,9 +151,9 @@ export default function Product() {
                             </p>
                         </div>
 
-                        <div class="platform-card">
-                            <div class="platform-icon">
-                                <i class="fas fa-mobile-alt"></i>
+                        <div className="platform-card">
+                            <div className="platform-icon">
+                                <i className="fas fa-mobile-alt"></i>
                             </div>
                             <h3>App Mobile</h3>
                             <p>
@@ -163,9 +163,9 @@ export default function Product() {
                             </p>
                         </div>
 
-                        <div class="platform-card">
-                            <div class="platform-icon">
-                                <i class="fas fa-tablet-alt"></i>
+                        <div className="platform-card">
+                            <div className="platform-icon">
+                                <i className="fas fa-tablet-alt"></i>
                             </div>
                             <h3>Tablet</h3>
                             <p>
@@ -178,18 +178,18 @@ export default function Product() {
                 </div>
             </section>
 
-            <section class="cta">
-                <div class="container">
+            <section className="cta">
+                <div className="container">
                     <h2>Pronto para transformar sua produção agrícola?</h2>
                     <p>
                         Agende uma demonstração personalizada e descubra como o
                         AgroSense pode otimizar sua operação.
                     </p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-light">
+                    <div className="cta-buttons">
+                        <a href="#" className="btn btn-light">
                             Solicitar Demonstração
                         </a>
-                        <a href="#" class="btn btn-outline-light">
+                        <a href="#" className="btn btn-outline-light">
                             Ver Planos e Preços
                         </a>
                     </div>

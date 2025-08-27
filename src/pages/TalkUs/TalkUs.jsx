@@ -78,10 +78,10 @@ export default function TalkUs() {
             />
 
             {/* Contact Form and Info */}
-            <section id="talk" class="contact-section">
-                <div class="container">
-                    <div class="contact-grid">
-                        <div class="contact-form-container">
+            <section id="talk" className="contact-section">
+                <div className="container">
+                    <div className="contact-grid">
+                        <div className="contact-form-container">
                             <h2>Entre em Contato</h2>
                             <p>
                                 Preencha o formulário abaixo e nossa equipe
@@ -90,10 +90,10 @@ export default function TalkUs() {
                                 discutir como podemos ajudar.
                             </p>
 
-                            <div class="contact-card">
-                                <div id="form-success" class="form-success">
-                                    <div class="success-icon">
-                                        <i class="fas fa-check"></i>
+                            <div className="contact-card">
+                                <div id="form-success" className="form-success">
+                                    <div className="success-icon">
+                                        <i className="fas fa-check"></i>
                                     </div>
                                     <h3>Mensagem Enviada!</h3>
                                     <p>
@@ -104,10 +104,10 @@ export default function TalkUs() {
 
                                 <form
                                     id="contactForm"
-                                    class="contact-form"
+                                    className="contact-form"
                                     onSubmit={handleSubmit}
                                 >
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <label for="name">Nome Completo</label>
                                         <input
                                             type="text"
@@ -124,7 +124,7 @@ export default function TalkUs() {
                                         )}
                                     </div>
 
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <label for="email">E-mail</label>
                                         <input
                                             type="email"
@@ -141,7 +141,7 @@ export default function TalkUs() {
                                         )}
                                     </div>
 
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <label for="phone">Telefone</label>
                                         <input
                                             type="tel"
@@ -158,7 +158,7 @@ export default function TalkUs() {
                                         )}
                                     </div>
 
-                                    <div class="form-group">
+                                    <div className="form-group">
                                         <label for="message">Mensagem</label>
                                         <textarea
                                             id="input-message"
@@ -170,7 +170,7 @@ export default function TalkUs() {
 
                                     <button
                                         type="submit"
-                                        class="btn btn-primary btn-block"
+                                        className="btn btn-primary btn-block"
                                         id="submitBtn"
                                     >
                                         Enviar Mensagem
@@ -179,7 +179,7 @@ export default function TalkUs() {
                             </div>
                         </div>
 
-                        <div class="contact-info-container">
+                        <div className="contact-info-container">
                             <h2>Informações de Contato</h2>
                             <p>
                                 Você também pode entrar em contato conosco
@@ -187,12 +187,12 @@ export default function TalkUs() {
                                 nosso escritório.
                             </p>
 
-                            <div class="contact-info-list">
-                                <div class="contact-info-item">
-                                    <div class="contact-info-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
+                            <div className="contact-info-list">
+                                <div className="contact-info-item">
+                                    <div className="contact-info-icon">
+                                        <i className="fas fa-map-marker-alt"></i>
                                     </div>
-                                    <div class="contact-info-text">
+                                    <div className="contact-info-text">
                                         <h3>Endereço</h3>
                                         <p>
                                             Av. Tecnologia Verde, 1234
@@ -204,11 +204,11 @@ export default function TalkUs() {
                                     </div>
                                 </div>
 
-                                <div class="contact-info-item">
-                                    <div class="contact-info-icon">
-                                        <i class="fas fa-phone"></i>
+                                <div className="contact-info-item">
+                                    <div className="contact-info-icon">
+                                        <i className="fas fa-phone"></i>
                                     </div>
-                                    <div class="contact-info-text">
+                                    <div className="contact-info-text">
                                         <h3>Telefone</h3>
                                         <p>
                                             +55 (11) 1234-5678
@@ -218,11 +218,11 @@ export default function TalkUs() {
                                     </div>
                                 </div>
 
-                                <div class="contact-info-item">
-                                    <div class="contact-info-icon">
-                                        <i class="fas fa-envelope"></i>
+                                <div className="contact-info-item">
+                                    <div className="contact-info-icon">
+                                        <i className="fas fa-envelope"></i>
                                     </div>
-                                    <div class="contact-info-text">
+                                    <div className="contact-info-text">
                                         <h3>E-mail</h3>
                                         <p>
                                             contato@AgroLinked.com.br
@@ -234,24 +234,24 @@ export default function TalkUs() {
                             </div>
 
                             <h3>Redes Sociais</h3>
-                            <div class="social-links-large">
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-facebook-f"></i>
+                            <div className="social-links-large">
+                                <a href="#" className="social-link">
+                                    <i className="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-instagram"></i>
+                                <a href="#" className="social-link">
+                                    <i className="fab fa-instagram"></i>
                                 </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-twitter"></i>
+                                <a href="#" className="social-link">
+                                    <i className="fab fa-twitter"></i>
                                 </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-linkedin-in"></i>
+                                <a href="#" className="social-link">
+                                    <i className="fab fa-linkedin-in"></i>
                                 </a>
                             </div>
 
-                            <div class="map-container">
+                            <div className="map-container">
                                 <img src={imgMap} alt="Mapa do Escritório" />
-                                <div class="map-overlay">
+                                <div className="map-overlay">
                                     <p>Mapa do Escritório</p>
                                 </div>
                             </div>
@@ -261,9 +261,9 @@ export default function TalkUs() {
             </section>
 
             {/* FAQ Section  */}
-            <section class="faq-section">
-                <div class="container">
-                    <div class="section-header">
+            <section className="faq-section">
+                <div className="container">
+                    <div className="section-header">
                         <h2>Perguntas Frequentes</h2>
                         <p>
                             Encontre respostas para as perguntas mais comuns
@@ -271,8 +271,8 @@ export default function TalkUs() {
                         </p>
                     </div>
 
-                    <div class="faq-grid">
-                        <div class="faq-card">
+                    <div className="faq-grid">
+                        <div className="faq-card">
                             <h3>Como funciona a demonstração gratuita?</h3>
                             <p>
                                 Nossa demonstração gratuita inclui uma
@@ -284,7 +284,7 @@ export default function TalkUs() {
                             </p>
                         </div>
 
-                        <div class="faq-card">
+                        <div className="faq-card">
                             <h3>
                                 Quanto tempo leva para implementar o sistema?
                             </h3>
@@ -297,7 +297,7 @@ export default function TalkUs() {
                             </p>
                         </div>
 
-                        <div class="faq-card">
+                        <div className="faq-card">
                             <h3>Vocês oferecem suporte técnico?</h3>
                             <p>
                                 Sim, oferecemos suporte técnico completo,
@@ -308,7 +308,7 @@ export default function TalkUs() {
                             </p>
                         </div>
 
-                        <div class="faq-card">
+                        <div className="faq-card">
                             <h3>
                                 As soluções funcionam em áreas sem internet?
                             </h3>
@@ -322,8 +322,8 @@ export default function TalkUs() {
                         </div>
                     </div>
 
-                    <div class="faq-cta">
-                        <a href="#" class="btn btn-outline">
+                    <div className="faq-cta">
+                        <a href="#" className="btn btn-outline">
                             Ver todas as perguntas frequentes
                         </a>
                     </div>
@@ -337,11 +337,11 @@ export default function TalkUs() {
                     "Entre em contato hoje mesmo e descubra como nossas soluções podem ajudar a otimizar sua operação."
                 }
             >
-                <div class="cta-buttons">
-                    <a href="#talk" class="btn btn-light">
+                <div className="cta-buttons">
+                    <a href="#talk" className="btn btn-light">
                         Agendar Demonstração
                     </a>
-                    <a href="product" class="btn btn-outline-light">
+                    <a href="product" className="btn btn-outline-light">
                         Conhecer Planos
                     </a>
                 </div>
