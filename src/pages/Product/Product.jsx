@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TabProduct from "../../components/Tabs/sectionProduct";
 import "../../index.css";
 import "../../mediaquery.css";
@@ -16,9 +17,10 @@ export default function Product() {
                             análise de dados e inteligência artificial para
                             otimizar sua produção agrícola.
                         </p>
-                        <a href="#" className="btn btn-primary">
-                            Solicitar Demonstração
-                        </a>
+
+                        <Link to="/demo" className="btn btn-primary">
+                            Solicitar Demo
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -186,9 +188,9 @@ export default function Product() {
                         AgroSense pode otimizar sua operação.
                     </p>
                     <div className="cta-buttons">
-                        <a href="#" className="btn btn-light">
+                        <Link to="/demo" className="btn btn-light">
                             Solicitar Demonstração
-                        </a>
+                        </Link>
                         <a href="#" className="btn btn-outline-light">
                             Ver Planos e Preços
                         </a>
