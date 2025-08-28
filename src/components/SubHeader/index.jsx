@@ -1,8 +1,8 @@
 export default function SubHeader({ title, description, children }) {
   return (
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-content">
+    <section className="page-hero">
+      <div className="container">
+        <div className="page-hero-content">
           <h1>{title}</h1>
           <p>{description}</p>
           {children && children}
