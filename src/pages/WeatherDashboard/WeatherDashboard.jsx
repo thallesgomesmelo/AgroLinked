@@ -113,7 +113,7 @@ export default function WeatherDashboard() {
 
   const geoCoding = async (city) => {
     try {
-      const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}+&count=1&language=en&format=json&countryCode=BR`)
+      const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en&format=json&countryCode=BR`)
 
       if (!response.ok) {
         throw new Error("Erro ao buscar dados");
@@ -126,7 +126,12 @@ export default function WeatherDashboard() {
       const latitude = data.results[0].latitude
       const longitude = data.results[0].longitude
 
+      console.log("Cidade:", city);
+      console.log("Response:\n", response);
+      console.log("Data:\n", data);
       return { location, state, latitude, longitude }
+
+
     } catch (error) {
       alert("Não foi possivel realizar pesquisa por cidade.")
     }
