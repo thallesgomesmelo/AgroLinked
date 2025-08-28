@@ -56,9 +56,8 @@ export default function WeatherDashboard() {
     return Math.min((value / 400) * 100, 100)
   }
 
-  const url = "https://api.open-meteo.com/v1/forecast";
-
   const weather = async (latitude, longitude) => {
+    const url = "https://api.open-meteo.com/v1/forecast";
     const params = {
       "latitude": latitude,
       "longitude": longitude,
@@ -78,6 +77,7 @@ export default function WeatherDashboard() {
       const date = new Date((Number(current.time()) + utcOffsetSeconds) * 1000)
       return new Intl.DateTimeFormat("pt-BR", { weekday: "long", hour: "2-digit", hour12: true }).format(date)
     }
+    const { aqi, status, description } = await airQuality(latitude, longitude)
 
     setWeatherData({
       current: {
@@ -87,7 +87,7 @@ export default function WeatherDashboard() {
         precipitation: parseFloat(current.variables(2).value()).toFixed(1),
         rain: parseFloat(current.variables(3).value()).toFixed(1),
         wind_speed: parseFloat(current.variables(4).value()).toFixed(1),
-        aqi: 67,
+        aqi,
       },
       forecast: {
         day: [...Array((Number(daily.timeEnd()) - Number(daily.time())) / daily.interval())].map(
@@ -103,13 +103,52 @@ export default function WeatherDashboard() {
         rain: daily.variables(4).valuesArray(),
       },
       aqiDetails: {
-        value: 120,
-        status: "Ruim",
-        description:
-          "O ar atingiu um alto nível de poluição e não é saudável para grupos sensíveis. Reduza o tempo gasto ao ar livre se estiver sentindo sintomas como dificuldade para respirar ou irritação na garganta",
+        value: aqi,
+        status,
+        description
       },
     })
   }
+
+  const airQuality = async (latitude, longitude) => {
+    const params = {
+      "latitude": latitude,
+      "longitude": longitude,
+      "current": "us_aqi",
+      "timezone": "America/Sao_Paulo",
+    };
+
+    const url = "https://air-quality-api.open-meteo.com/v1/air-quality";
+    const responses = await fetchWeatherApi(url, params);
+
+    // Process first location. Add a for-loop for multiple locations or weather models
+    const response = responses[0];
+    const current = response.current();
+
+    const aqi = parseFloat(current.variables(0).value()).toFixed(1)
+    let status = "Perigoso"
+    let description = "Emergência de saúde pública. Toda a população pode ser gravemente afetada."
+
+    if (aqi <= 50) {
+      status = "Bom"
+      description = "A qualidade do ar é considerada satisfatória e não oferece riscos à saúde."
+    } else if (aqi <= 100) {
+      status = "Moderado"
+      description = "A qualidade do ar é aceitável, mas pode representar risco para pessoas muito sensíveis."
+    } else if (aqi <= 150) {
+      status = "Ruim"
+      description = "A qualidade do ar pode causar problemas de saúde para pessoas sensíveis (idosos, crianças, asmáticos)."
+    } else if (aqi <= 200) {
+      status = "Muito Ruim"
+      description = "Toda a população pode começar a sentir efeitos adversos à saúde. Grupos sensíveis podem sentir efeitos mais sérios."
+    } else if (aqi <= 300) {
+      status = "Péssimo"
+      description = "Alerta! Todos podem apresentar sérios problemas de saúde."
+    }
+
+    return { aqi, status, description }
+  }
+
 
   const geoCoding = async (city) => {
     try {
