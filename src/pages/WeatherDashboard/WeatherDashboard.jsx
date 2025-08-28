@@ -126,14 +126,9 @@ export default function WeatherDashboard() {
       const latitude = data.results[0].latitude
       const longitude = data.results[0].longitude
 
-      console.log("Cidade:", city);
-      console.log("Response:\n", response);
-      console.log("Data:\n", data);
       return { location, state, latitude, longitude }
-
-
     } catch (error) {
-      alert("Não foi possivel realizar pesquisa por cidade.")
+      alert("Não foi possível realizar pesquisa por cidade.")
     }
   }
 
