@@ -185,7 +185,7 @@ a.btn-mobile {
 }
 
 .main-nav .link {
-  color: var(--color-primary-light);
+    color: var(--color-primary-light);
 }
 
 .main-nav a:hover,

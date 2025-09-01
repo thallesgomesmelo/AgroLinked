@@ -18,6 +18,7 @@ function NotFound() {
   );
 }
 import Beneficios from "../pages/Beneficios/Beneficios";
+import WeatherDashboard from "../pages/WeatherDashboard/WeatherDashboard";
 
 export default function AppRoutes() {
   return (
@@ -32,10 +33,11 @@ export default function AppRoutes() {
           <Route path="talkus" element={<TalkUs />} />
           <Route path="*" element={<NotFound />} />
                     <Route path="/beneficios" element={<Beneficios />} />
-       
-      </Routes>
-    </MainLayout>
-    </BrowserRouter>
-  );
+                   
+                    <Route path="/demo" element={<WeatherDashboard />} />
+                </Routes>
+            </MainLayout>
+        </BrowserRouter>
+    );
 }
 

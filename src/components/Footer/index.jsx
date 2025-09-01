@@ -4,32 +4,32 @@ import "../../mediaquery.css";
 export default function Footer() {
     return (
         <>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer-content">
-                        <div class="footer-col">
+            <footer className="footer">
+                <div className="container">
+                    <div className="footer-content">
+                        <div className="footer-col">
                             <h3>AgroLinked</h3>
                             <p>
                                 Transformando o agronegócio com soluções
                                 tecnológicas inovadoras e sustentáveis.
                             </p>
-                            <div class="social-links">
+                            <div className="social-links">
                                 <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
+                                    <i className="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="#">
-                                    <i class="fab fa-instagram"></i>
+                                    <i className="fab fa-instagram"></i>
                                 </a>
                                 <a href="#">
-                                    <i class="fab fa-twitter"></i>
+                                    <i className="fab fa-twitter"></i>
                                 </a>
                                 <a href="#">
-                                    <i class="fab fa-linkedin-in"></i>
+                                    <i className="fab fa-linkedin-in"></i>
                                 </a>
                             </div>
                         </div>
 
-                        <div class="footer-col">
+                        <div className="footer-col">
                             <h3>Links Rápidos</h3>
                             <ul>
                                 <li>
@@ -50,11 +50,11 @@ export default function Footer() {
                             </ul>
                         </div>
 
-                        <div class="footer-col">
+                        <div className="footer-col">
                             <h3>Contato</h3>
-                            <ul class="contact-info">
+                            <ul className="contact-info">
                                 <li>
-                                    <i class="fas fa-map-marker-alt"></i>
+                                    <i className="fas fa-map-marker-alt"></i>
                                     <span>
                                         Av. Tecnologia Verde, 1234
                                         <br />
@@ -62,23 +62,23 @@ export default function Footer() {
                                     </span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-phone"></i>
+                                    <i className="fas fa-phone"></i>
                                     <span>(11) 1234-5678</span>
                                 </li>
                                 <li>
-                                    <i class="fas fa-envelope"></i>
+                                    <i className="fas fa-envelope"></i>
                                     <span>contato@AgroLinked.com.br</span>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="footer-col">
+                        <div className="footer-col">
                             <h3>Newsletter</h3>
                             <p>
                                 Inscreva-se para receber novidades e
                                 atualizações sobre nossas soluções.
                             </p>
-                            <form class="newsletter-form">
+                            <form className="newsletter-form">
                                 <input
                                     type="email"
                                     placeholder="Seu e-mail"
@@ -89,7 +89,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div class="footer-bottom">
+                    <div className="footer-bottom">
                         <p>
                             &copy; <span id="currentYear"></span> AgroLinked.
                             Todos os direitos reservados.

@@ -1,4 +1,29 @@
 import SustentabilidadeImg from "../../assets/Sustentabilidade.png";
+import SustainabilityCard from "./SustainabilityCard";
+
+const sustainabilityCards = [
+    {
+        iconClass: "fas fa-seedling",
+        title: "Redução de Químicos",
+        description:
+            "Aplicação precisa reduz o uso de defensivos agrícolas em até 30%.",
+    },
+    {
+        iconClass: "fas fa-chart-line",
+        title: "Economia de Água",
+        description: "Irrigação inteligente economiza até 40% de água.",
+    },
+    {
+        iconClass: "fas fa-chart-bar",
+        title: "Redução de Emissões",
+        description: "Otimização de operações reduz emissões de carbono.",
+    },
+    {
+        iconClass: "fas fa-leaf",
+        title: "Biodiversidade",
+        description: "Práticas sustentáveis preservam a biodiversidade local.",
+    },
+];
 
 export default function Sustainability() {
     return (
@@ -17,41 +42,14 @@ export default function Sustainability() {
                         </p>
 
                         <div className="sustainability-grid">
-                            <div className="sustainability-card">
-                                <i className="fas fa-seedling"></i>
-                                <h3>Redução de Químicos</h3>
-                                <p>
-                                    Aplicação precisa reduz o uso de defensivos
-                                    agrícolas em até 30%.
-                                </p>
-                            </div>
-
-                            <div className="sustainability-card">
-                                <i className="fas fa-chart-line"></i>
-                                <h3>Economia de Água</h3>
-                                <p>
-                                    Irrigação inteligente economiza até 40% de
-                                    água.
-                                </p>
-                            </div>
-
-                            <div className="sustainability-card">
-                                <i className="fas fa-chart-bar"></i>
-                                <h3>Redução de Emissões</h3>
-                                <p>
-                                    Otimização de operações reduz emissões de
-                                    carbono.
-                                </p>
-                            </div>
-
-                            <div className="sustainability-card">
-                                <i className="fas fa-leaf"></i>
-                                <h3>Biodiversidade</h3>
-                                <p>
-                                    Práticas sustentáveis preservam a
-                                    biodiversidade local.
-                                </p>
-                            </div>
+                            {sustainabilityCards.map((card, idx) => (
+                                <SustainabilityCard
+                                    key={idx}
+                                    iconClass={card.iconClass}
+                                    title={card.title}
+                                    description={card.description}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>

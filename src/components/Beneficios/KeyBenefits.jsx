@@ -1,3 +1,28 @@
+import BenefitsCard from "./BenefitsCard";
+
+const benefits = [
+    {
+        header: "Aumento de Produtividade",
+        iconClass: "fas fa-percentage",
+        text: "Aumente sua produtividade em até 30% com decisões baseadas em dados precisos e recomendações personalizadas.",
+    },
+    {
+        header: "Redução de Custos",
+        iconClass: "fas fa-dollar-sign",
+        text: "Otimize o uso de recursos como água, fertilizantes e defensivos, reduzindo custos operacionais em até 25%.",
+    },
+    {
+        header: "Sustentabilidade",
+        iconClass: "fas fa-leaf",
+        text: "Promova práticas agrícolas mais sustentáveis,reduzindo o impacto ambiental e preservando recursos naturais.",
+    },
+    {
+        header: "Economia de Tempo",
+        iconClass: "fas fa-clock",
+        text: "Automatize processos e reduza o tempo gasto em monitoramento manual e tomada de decisões.",
+    },
+];
+
 export default function KeyBenefits() {
     return (
         <section className="key-benefits">
@@ -9,54 +34,15 @@ export default function KeyBenefits() {
                         impulsionam seu negócio agrícola.
                     </p>
                 </div>
-
                 <div className="benefits-grid">
-                    <div className="benefit-card">
-                        <div className="benefit-icon">
-                            <i className="fas fa-percentage"></i>
-                        </div>
-                        <h3>Aumento de Produtividade</h3>
-                        <p>
-                            Aumente sua produtividade em até 30% com decisões
-                            baseadas em dados precisos e recomendações
-                            personalizadas.
-                        </p>
-                    </div>
-
-                    <div className="benefit-card">
-                        <div className="benefit-icon">
-                            <i className="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3>Redução de Custos</h3>
-                        <p>
-                            Otimize o uso de recursos como água, fertilizantes e
-                            defensivos, reduzindo custos operacionais em até
-                            25%.
-                        </p>
-                    </div>
-
-                    <div className="benefit-card">
-                        <div className="benefit-icon">
-                            <i className="fas fa-leaf"></i>
-                        </div>
-                        <h3>Sustentabilidade</h3>
-                        <p>
-                            Promova práticas agrícolas mais sustentáveis,
-                            reduzindo o impacto ambiental e preservando recursos
-                            naturais.
-                        </p>
-                    </div>
-
-                    <div className="benefit-card">
-                        <div className="benefit-icon">
-                            <i className="fas fa-clock"></i>
-                        </div>
-                        <h3>Economia de Tempo</h3>
-                        <p>
-                            Automatize processos e reduza o tempo gasto em
-                            monitoramento manual e tomada de decisões.
-                        </p>
-                    </div>
+                    {benefits.map((benefit, i) => (
+                        <BenefitsCard
+                            key={i}
+                            header={benefit.header}
+                            iconClass={benefit.iconClass}
+                            text={benefit.text}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
