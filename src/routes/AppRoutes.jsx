@@ -17,20 +17,25 @@ function NotFound() {
     </section>
   );
 }
+import Beneficios from "../pages/Beneficios/Beneficios";
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
+    <MainLayout>
+     
       <Routes>
-        <Route element={<MainLayout />}>
           <Route index element={<Start />} />
           <Route path="start" element={<Start />} />
           <Route path="about" element={<AboutUs />} />
-          <Route path="product" element={<Product />} />
+          <Route path="produto" element={<Product />} />
           <Route path="talkus" element={<TalkUs />} />
           <Route path="*" element={<NotFound />} />
-        </Route>
+                    <Route path="/beneficios" element={<Beneficios />} />
+       
       </Routes>
+    </MainLayout>
     </BrowserRouter>
   );
 }
+

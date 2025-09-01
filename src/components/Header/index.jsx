@@ -1,99 +1,101 @@
-import { Link, NavLink } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import logoverde from "../../assets/logoverde.jpg";
 import "../../index.css";
 import "../../mediaquery.css";
 
 export default function Header() {
-  return (
-    <>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet"
-      />
-      <header class="header">
-        <div class="container">
-          <div class="header-content">
-            <a href="index.html" class="logo">
-              <img
-                src="src\assets\logoverde.jpg"
-                alt="AgroLinked Logo"
-                width="40"
-                height="40"
-              />
-              <span>AgroLinked</span>
-            </a>
+    const location = useLocation();
 
-            <nav class="main-nav">
-              <ul>
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? "link-active" : "link"
-                    }
-                  >
-                    Início
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/product"
-                    className={({ isActive }) =>
-                      isActive ? "link-active" : "link"
-                    }
-                  >
-                    Produto
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? "link-active" : "link"
-                    }
-                  >
-                    Benefícios
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? "link-active" : "link"
-                    }
-                  >
-                    Sobre Nós
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/talkus"
-                    className={({ isActive }) =>
-                      isActive ? "link-active" : "link"
-                    }
-                  >
-                    Fale Conosco
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
+    return (
+        <header className="header">
+            <div className="container">
+                <div className="header-content">
+                    <Link to="/" className="logo">
+                        <img
+                            src={logoverde}
+                            alt="AgroLinked Logo"
+                            width="40"
+                            height="40"
+                        />
+                        <span>AgroLinked</span>
+                    </Link>
 
-            <div class="header-actions">
-              <a href="#" class="btn btn-primary btn-mobile">
-                Solicitar Demo
-              </a>
-              <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-              </button>
+                    <nav className="main-nav">
+                        <ul>
+                            <li>
+                                <Link
+                                    to="/start"
+                                    className={
+                                        location.pathname === "/"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    Início
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/produto"
+                                    className={
+                                        location.pathname === "/produto"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    Produto
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/beneficios"
+                                    className={
+                                        location.pathname === "/beneficios"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    Benefícios
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/about"
+                                    className={
+                                        location.pathname === "/sobre"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    Sobre Nós
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/talkus"
+                                    className={
+                                        location.pathname === "/talkus"
+                                            ? "active"
+                                            : ""
+                                    }
+                                >
+                                    Fale Conosco
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div className="header-actions">
+                        <Link to="/demo" className="btn btn-primary btn-mobile">
+                            Solicitar Demo
+                        </Link>
+                        <button className="menu-toggle" id="menuToggle">
+                            <i className="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </header>
-    </>
-  );
+        </header>
+    );
 }
