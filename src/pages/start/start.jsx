@@ -1,5 +1,6 @@
 import React from "react";
 import CTASection from "../../components/CTASection";
+import logoPainel from "../../assets/logo.jpg"
 
 export default function Start() {
     return (
@@ -29,7 +30,7 @@ export default function Start() {
                         </div>
                         <div className="hero-image">
                             <img
-                                src="src\assets\logo.jpg"
+                                src={logoPainel}
                                 alt="Tecnologia no Agronegócio"
                             />
                         </div>

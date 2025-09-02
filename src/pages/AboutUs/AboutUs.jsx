@@ -1,5 +1,18 @@
 import CTASection from "../../components/CTASection";
 import SubHeader from "../../components/SubHeader";
+import placa from "../../assets/Placa.png"
+import ceo from "../../assets/Marcos Silva.jpg"
+import cto from "../../assets/Carla Oliveira.jpg"
+import coo from "../../assets/Roberto Santos.jpg"
+import headResearch from "../../assets/Ana Costa.jpg"
+import parceiro1 from "../../assets/FarmFresh.png"
+import parceiro2 from "../../assets/Agriculture.jpg"
+import parceiro3 from "../../assets/Agrio.png"
+import parceiro4 from "../../assets/GreenHause.png"
+import parceiro5 from "../../assets/NatureCare.png"
+import parceiro6 from "../../assets/Rooster.png"
+import parceiro7 from "../../assets/Maizecorn.png"
+import parceiro8 from "../../assets/Plantcom.png"
 
 export default function AboutUs() {
     return (
@@ -41,7 +54,7 @@ export default function AboutUs() {
                         </div>
                         <div className="story-image">
                             <img
-                                src="src\assets\Placa.png"
+                                src={placa}
                                 alt="História da AgroLinked"
                             />
                         </div>
@@ -169,7 +182,7 @@ export default function AboutUs() {
                         <div className="team-member">
                             <div className="member-photo">
                                 <img
-                                    src="src\assets\Marcos Silva.jpg"
+                                    src={ceo}
                                     alt="CEO"
                                 />
                             </div>
@@ -180,7 +193,7 @@ export default function AboutUs() {
                         <div className="team-member">
                             <div className="member-photo">
                                 <img
-                                    src="src\assets\Carla Oliveira.jpg"
+                                    src={cto}
                                     alt="CTO"
                                 />
                             </div>
@@ -191,7 +204,7 @@ export default function AboutUs() {
                         <div className="team-member">
                             <div className="member-photo">
                                 <img
-                                    src="src\assets\Roberto Santos.jpg"
+                                    src={coo}
                                     alt="COO"
                                 />
                             </div>
@@ -202,7 +215,7 @@ export default function AboutUs() {
                         <div className="team-member">
                             <div className="member-photo">
                                 <img
-                                    src="src\assets\Ana Costa.jpg"
+                                    src={headResearch}
                                     alt="Head of Research"
                                 />
                             </div>
@@ -234,46 +247,46 @@ export default function AboutUs() {
                     <div className="partners-grid">
                         <div className="partner-logo">
                             <img
-                                src="src\assets\FarmFresh.png"
+                                src={parceiro1}
                                 alt="Parceiro 1"
                             />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\Agriculture.jpg"
+                                src={parceiro2}
                                 alt="Parceiro 2"
                             />
                         </div>
                         <div className="partner-logo">
-                            <img src="src\assets\Agrio.png" alt="Parceiro 3" />
+                            <img src={parceiro3} alt="Parceiro 3" />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\GreenHause.png"
+                                src={parceiro4}
                                 alt="Parceiro 4"
                             />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\NatureCare.png"
+                                src={parceiro5}
                                 alt="Parceiro 5"
                             />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\Rooster.png"
+                                src={parceiro6}
                                 alt="Parceiro 6"
                             />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\Maizecorn.png"
+                                src={parceiro7}
                                 alt="Parceiro 7"
                             />
                         </div>
                         <div className="partner-logo">
                             <img
-                                src="src\assets\Plantcom.png"
+                                src={parceiro8}
                                 alt="Parceiro 8"
                             />
                         </div>

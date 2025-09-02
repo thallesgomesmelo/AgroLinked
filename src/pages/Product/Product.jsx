@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TabProduct from "../../components/Tabs/sectionProduct";
+import agroSense from "../../assets/AgroSense.png"
 import "../../index.css";
 import "../../mediaquery.css";
 
@@ -30,7 +31,7 @@ export default function Product() {
                     <div className="product-overview-content">
                         <div className="product-image">
                             <img
-                                src="src\assets\AgroSense.png"
+                                src={agroSense}
                                 alt="Plataforma AgroSense"
                             />
                         </div>

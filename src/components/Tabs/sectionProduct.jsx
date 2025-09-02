@@ -1,5 +1,9 @@
 import "../../index.css";
 import { useState } from "react";
+import dashboard from "../../assets/Dashboard.png"
+import monitor from "../../assets/Monitoramento.png"
+import previson from "../../assets/Previsões.png"
+import records from "../../assets/Relatórios.png"
 
 export default function TabProduct() {
     const [activeTab, setActiveTab] = useState("dashboard");
@@ -62,7 +66,7 @@ export default function TabProduct() {
                         </div>
                         <div className="tab-image">
                             <img
-                                src="src\assets\Dashboard.png"
+                                src={dashboard}
                                 alt="Dashboard AgroSense"
                             />
                         </div>
@@ -75,7 +79,7 @@ export default function TabProduct() {
                     <div className="tab-content-inner reverse">
                         <div className="tab-image">
                             <img
-                                src="src\assets\Monitoramento.png"
+                                src={monitor}
                                 alt="Monitoramento AgroSense"
                             />
                         </div>
@@ -120,7 +124,7 @@ export default function TabProduct() {
                         </div>
                         <div className="tab-image">
                             <img
-                                src="src\assets\Previsões.png"
+                                src={previson}
                                 alt="Previsões AgroSense"
                             />
                         </div>
@@ -133,7 +137,7 @@ export default function TabProduct() {
                     <div className="tab-content-inner reverse">
                         <div className="tab-image">
                             <img
-                                src="src\assets\Relatórios.png"
+                                src={records}
                                 alt="Relatórios AgroSense"
                             />
                         </div>
