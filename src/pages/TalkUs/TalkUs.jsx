@@ -59,7 +59,7 @@ export default function TalkUs() {
         setLoading(true)
 
         try {
-            const response = await fetch("https://formsubmit.co/thallesgomesmello@gmail.com", {
+            const response = await fetch("https://formsubmit.co/agroliked@gmail.com", {
                 method: "POST",
                 body: JSON.stringify(formData),
                 headers: { "Content-Type": "application/json" },
