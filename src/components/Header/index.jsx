@@ -25,7 +25,7 @@ export default function Header() {
                         <ul>
                             <li>
                                 <Link
-                                    to="/"
+                                    to="/start"
                                     className={
                                         location.pathname === "/"
                                             ? "active"
@@ -61,7 +61,7 @@ export default function Header() {
                             </li>
                             <li>
                                 <Link
-                                    to="/sobre"
+                                    to="/about"
                                     className={
                                         location.pathname === "/sobre"
                                             ? "active"
