@@ -27,7 +27,7 @@ export default function Header() {
                                 <Link
                                     to="/start"
                                     className={
-                                        location.pathname === "/"
+                                        location.pathname === "/start"
                                             ? "active"
                                             : ""
                                     }
@@ -63,7 +63,7 @@ export default function Header() {
                                 <Link
                                     to="/about"
                                     className={
-                                        location.pathname === "/sobre"
+                                        location.pathname === "/about"
                                             ? "active"
                                             : ""
                                     }

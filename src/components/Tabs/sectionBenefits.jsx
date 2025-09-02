@@ -6,7 +6,7 @@ import CanaImg from "../../assets/Cana-de-açúcar.png";
 import { useState } from "react";
 
 export default function TabBenefits() {
-    const [activeTab, setActiveTab] = useState("milho");
+    const [activeTab, setActiveTab] = useState("soja");
 
     return (
         <>
