@@ -29,7 +29,7 @@ export default function Start() {
                         </div>
                         <div className="hero-image">
                             <img
-                                src="/img/logo.jpg"
+                                src="src\assets\logo.jpg"
                                 alt="Tecnologia no Agronegócio"
                             />
                         </div>
