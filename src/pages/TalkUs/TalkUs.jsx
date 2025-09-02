@@ -14,6 +14,8 @@ export default function TalkUs() {
         phone: "",
     });
     const [errors, setErros] = useState({});
+    const [loading, setLoading] = useState(false)
+    const [success, setSuccess] = useState(false)
 
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -43,7 +45,7 @@ export default function TalkUs() {
         return newErrors;
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const validationErrors = validateForm();
@@ -54,18 +56,25 @@ export default function TalkUs() {
         }
 
         setErros({});
+        setLoading(true)
 
-        fetch("https://formsubmit.co/agroliked@gmail.com", {
-            method: "POST",
-            body: JSON.stringify(formData),
-            headers: { "Content-Type": "application/json" },
-        })
-            .then((res) => {
-                console.log("Resposta do servidor de email: \n", res);
+        try {
+            const response = await fetch("https://formsubmit.co/thallesgomesmello@gmail.com", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: { "Content-Type": "application/json" },
             })
-            .catch((error) => {
-                console.log("Erro ao enviar formulário: \n", error);
-            });
+
+            if (!response.ok) throw new Error("Erro ao enviar formulário");
+
+            setSuccess(true)
+            setTimeout(() => setSuccess(false), 1000 * 3)
+        } catch (error) {
+            console.error("Erro ao enviar formulário: ", error)
+            alert("Ocorreu um erro ao enviar. Tente novamente.")
+        } finally {
+            setLoading(false)
+        }
     };
 
     return (
@@ -91,91 +100,91 @@ export default function TalkUs() {
                             </p>
 
                             <div className="contact-card">
-                                <div id="form-success" className="form-success">
-                                    <div className="success-icon">
-                                        <i className="fas fa-check"></i>
+                                {success ? (
+                                    <div id="form-success" className="form-success">
+                                        <div className="success-icon">
+                                            <i className="fas fa-check"></i>
+                                        </div>
+                                        <h3>Mensagem Enviada!</h3>
+                                        <p>Obrigado por entrar em contato. Nossa equipe responderá em breve.</p>
                                     </div>
-                                    <h3>Mensagem Enviada!</h3>
-                                    <p>
-                                        Obrigado por entrar em contato. Nossa
-                                        equipe responderá em breve.
-                                    </p>
-                                </div>
-
-                                <form
-                                    id="contactForm"
-                                    className="contact-form"
-                                    onSubmit={handleSubmit}
-                                >
-                                    <div className="form-group">
-                                        <label for="name">Nome Completo</label>
-                                        <input
-                                            type="text"
-                                            id="input-name"
-                                            name="name"
-                                            placeholder="Seu nome completo"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                        />
-                                        {errors.name && (
-                                            <span className="form-erro">
-                                                {errors.name}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label for="email">E-mail</label>
-                                        <input
-                                            type="email"
-                                            id="input-email"
-                                            name="email"
-                                            placeholder="seu.email@exemplo.com"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                        />
-                                        {errors.email && (
-                                            <span className="form-erro">
-                                                {errors.email}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label for="phone">Telefone</label>
-                                        <input
-                                            type="tel"
-                                            id="input-phone"
-                                            name="phone"
-                                            placeholder="(00) 00000-0000"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                        />
-                                        {errors.phone && (
-                                            <span className="form-erro">
-                                                {errors.phone}
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    <div className="form-group">
-                                        <label for="message">Mensagem</label>
-                                        <textarea
-                                            id="input-message"
-                                            name="message"
-                                            placeholder="Como podemos ajudar?"
-                                            rows="5"
-                                        ></textarea>
-                                    </div>
-
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary btn-block"
-                                        id="submitBtn"
+                                ) : (
+                                    <form
+                                        id="contactForm"
+                                        className="contact-form"
+                                        onSubmit={handleSubmit}
                                     >
-                                        Enviar Mensagem
-                                    </button>
-                                </form>
+                                        <div className="form-group">
+                                            <label htmlFor="name">Nome Completo</label>
+                                            <input
+                                                type="text"
+                                                id="input-name"
+                                                name="name"
+                                                placeholder="Seu nome completo"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.name && (
+                                                <span className="form-erro">
+                                                    {errors.name}
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="email">E-mail</label>
+                                            <input
+                                                type="email"
+                                                id="input-email"
+                                                name="email"
+                                                placeholder="seu.email@exemplo.com"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.email && (
+                                                <span className="form-erro">
+                                                    {errors.email}
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="phone">Telefone</label>
+                                            <input
+                                                type="tel"
+                                                id="input-phone"
+                                                name="phone"
+                                                placeholder="(00) 00000-0000"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                            />
+                                            {errors.phone && (
+                                                <span className="form-erro">
+                                                    {errors.phone}
+                                                </span>
+                                            )}
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="message">Mensagem</label>
+                                            <textarea
+                                                id="input-message"
+                                                name="message"
+                                                placeholder="Como podemos ajudar?"
+                                                rows="5"
+                                            ></textarea>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary btn-block"
+                                            disabled={loading}
+                                            id="submitBtn"
+                                        >
+                                            {loading ? "Enviando ..." : "Enviar Mensagem"}
+                                        </button>
+                                    </form>
+                                )}
                             </div>
                         </div>
 
