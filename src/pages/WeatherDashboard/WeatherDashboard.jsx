@@ -11,6 +11,7 @@ import {
     Search,
 } from "lucide-react";
 import { fetchWeatherApi } from "openmeteo";
+import WeatherChatbot from "../../components/WeatherChatbot/WeatherChatbot";
 
 const tabs = [
     { id: "temperature", label: "Temperatura", icon: Sun },
@@ -404,6 +405,7 @@ export default function WeatherDashboard() {
                     </div>
                 </div>
             </div>
+            <WeatherChatbot weatherData={weatherData} currentCity={currentCity} />
         </div>
     );
 }
