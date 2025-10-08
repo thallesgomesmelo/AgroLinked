@@ -58,7 +58,7 @@ const WeatherChatbot = ({ weatherData, currentCity }) => {
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]);
+    }, [messages, showQuestions]);
 
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
