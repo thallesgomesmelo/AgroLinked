@@ -33,10 +33,12 @@ export default function ROISection() {
                     <div className="roi-text">
                         <h2>Retorno sobre Investimento</h2>
                         <p>
-                            Nossos clientes relatam um retorno sobre
-                            investimento significativo após a implementação das
-                            soluções AgroLinked. Veja como nossa tecnologia pode
-                            impactar positivamente seus resultados financeiros.
+                            As soluções AgroLinked proporcionarão um retorno
+                            sobre investimento expressivo, com tecnologia
+                            inovadora projetada para transformar e potencializar
+                            os resultados financeiros do agronegócio. Confira as
+                            estimativas de impacto econômico para aqueles que
+                            adotarem nossa solução.
                         </p>
 
                         <div className="roi-stats">
