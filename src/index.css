@@ -1183,9 +1183,22 @@ a.btn-mobile {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center; /* centraliza na horizontal */
     gap: 3rem;
+    flex-wrap: nowrap; /* impede quebrar linha */
+}
+
+.team-member {
+    text-align: center;
+    flex: 1 1 0; /* deixa cada card ocupar uma fração igual */
+}
+
+@media (max-width: 767px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .team-member {

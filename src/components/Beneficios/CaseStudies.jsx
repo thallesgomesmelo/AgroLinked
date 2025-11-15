@@ -5,10 +5,11 @@ export default function CaseStudies() {
         <section className="case-studies">
             <div className="container">
                 <div className="section-header">
-                    <h2>Casos de Sucesso</h2>
+                    <h2>Nivel De Eficacia</h2>
                     <p>
-                        Conheça histórias reais de produtores que transformaram
-                        suas operações com a tecnologia AgroLinked.
+                        Confira o desempenho obtido em nossos testes, expresso
+                        em porcentagens, e observe o nível de eficácia que nossa
+                        solução está alcançando.
                     </p>
                 </div>
 

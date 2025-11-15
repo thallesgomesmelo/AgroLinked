@@ -1,6 +1,6 @@
 import React from "react";
 import CTASection from "../../components/CTASection";
-import logoPainel from "../../assets/logo.jpg"
+import logoPainel from "../../assets/logo.jpg";
 
 export default function Start() {
     return (
@@ -141,7 +141,7 @@ export default function Start() {
             <CTASection
                 title={"Pronto para revolucionar sua produção agrícola?"}
                 description={
-                    "Junte-se a milhares de produtores que já estão colhendo os benefícios da tecnologia AgroLinked."
+                    "A evolução do campo começa aqui. AgroLinked: tecnologia nova, feita por quem conhece o trabalho de verdade."
                 }
             >
                 <div className="cta-buttons">

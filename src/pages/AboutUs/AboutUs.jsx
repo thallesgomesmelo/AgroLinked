@@ -1,18 +1,18 @@
 import CTASection from "../../components/CTASection";
 import SubHeader from "../../components/SubHeader";
-import placa from "../../assets/Placa.png"
-import ceo from "../../assets/Marcos Silva.jpg"
-import cto from "../../assets/Carla Oliveira.jpg"
-import coo from "../../assets/Roberto Santos.jpg"
-import headResearch from "../../assets/Ana Costa.jpg"
-import parceiro1 from "../../assets/FarmFresh.png"
-import parceiro2 from "../../assets/Agriculture.jpg"
-import parceiro3 from "../../assets/Agrio.png"
-import parceiro4 from "../../assets/GreenHause.png"
-import parceiro5 from "../../assets/NatureCare.png"
-import parceiro6 from "../../assets/Rooster.png"
-import parceiro7 from "../../assets/Maizecorn.png"
-import parceiro8 from "../../assets/Plantcom.png"
+import placa from "../../assets/Placa.png";
+import ceo from "../../assets/Marcos Silva.jpg";
+import cto from "../../assets/Carla Oliveira.jpg";
+import coo from "../../assets/Roberto Santos.jpg";
+import headResearch from "../../assets/Ana Costa.jpg";
+import parceiro1 from "../../assets/FarmFresh.png";
+import parceiro2 from "../../assets/Agriculture.jpg";
+import parceiro3 from "../../assets/Agrio.png";
+import parceiro4 from "../../assets/GreenHause.png";
+import parceiro5 from "../../assets/NatureCare.png";
+import parceiro6 from "../../assets/Rooster.png";
+import parceiro7 from "../../assets/Maizecorn.png";
+import parceiro8 from "../../assets/Plantcom.png";
 
 export default function AboutUs() {
     return (
@@ -29,34 +29,41 @@ export default function AboutUs() {
                 <div className="container">
                     <div className="story-content">
                         <div className="story-text">
-                            <h2>Nossa História</h2>
+                            <h2>Nossa Maneira de mudar o futuro</h2>
                             <p>
-                                A AgroLinked nasceu em 2018 da visão de um grupo
-                                de engenheiros agrônomos e especialistas em
-                                tecnologia que acreditavam no potencial da
-                                transformação digital para o agronegócio
-                                brasileiro.
+                                A AgroLinked começou a tomar forma em 2025, nas
+                                salas da FIAP, quando um grupo de estudantes de
+                                Engenharia de Software decidiu transformar
+                                curiosidade em propósito. O que nasceu como um
+                                projeto acadêmico logo evoluiu para uma visão
+                                maior: construir soluções capazes de conectar
+                                tecnologia, inteligência de dados e inovação ao
+                                dia a dia do agronegócio brasileiro.
                             </p>
                             <p>
-                                Começamos desenvolvendo soluções simples para
-                                monitoramento de lavouras e, ao longo dos anos,
-                                expandimos nossa plataforma para uma solução
-                                completa que integra IoT, inteligência
-                                artificial e análise de dados para otimizar
-                                todos os aspectos da produção agrícola.
+                                Ainda estamos escrevendo essa história. Cada
+                                linha de código, cada protótipo testado e cada
+                                ideia discutida representa um passo a mais rumo
+                                ao futuro que queremos criar. A AgroLinked não é
+                                apenas um sistema — é um movimento que está
+                                crescendo, ganhando forma e encontrando seu
+                                caminho.
                             </p>
                             <p>
-                                Hoje, a AgroLinked é reconhecida como uma das
-                                principais empresas de tecnologia para o
-                                agronegócio, com presença em todo o Brasil e
-                                expansão para outros países da América Latina.
+                                Nosso objetivo é claro: desenvolver uma
+                                plataforma que ajude produtores, técnicos e
+                                empresas a tomarem decisões mais inteligentes,
+                                sustentáveis e eficientes. Estamos construindo
+                                isso juntos, com dedicação, aprendizado
+                                constante e a vontade de fazer a diferença.
                             </p>
+                            <h4>
+                                Construindo hoje a tecnologia que vai
+                                transformar o amanhã.
+                            </h4>
                         </div>
                         <div className="story-image">
-                            <img
-                                src={placa}
-                                alt="História da AgroLinked"
-                            />
+                            <img src={placa} alt="História da AgroLinked" />
                         </div>
                     </div>
                 </div>
@@ -108,65 +115,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-            {/* Números-Chave */}
-            <section className="key-numbers">
-                <div className="container">
-                    <div className="section-header">
-                        <h2>AgroLinked em Números</h2>
-                        <p>
-                            Conheça o impacto da nossa tecnologia no agronegócio
-                            brasileiro e mundial.
-                        </p>
-                    </div>
-
-                    <div className="numbers-grid">
-                        <div className="number-item">
-                            <div className="number-icon">
-                                <i
-                                    className="fas fa-users"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-                            <div className="number-value">5.000+</div>
-                            <p>Produtores Atendidos</p>
-                        </div>
-
-                        <div className="number-item">
-                            <div className="number-icon">
-                                <i
-                                    className="fas fa-globe"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-                            <div className="number-value">3M+</div>
-                            <p>Hectares Monitorados</p>
-                        </div>
-
-                        <div className="number-item">
-                            <div className="number-icon">
-                                <i
-                                    className="fas fa-award"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-                            <div className="number-value">15+</div>
-                            <p>Prêmios de Inovação</p>
-                        </div>
-
-                        <div className="number-item">
-                            <div className="number-icon">
-                                <i
-                                    className="fas fa-clock"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-                            <div className="number-value">5 anos</div>
-                            <p>De Experiência</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Equipe */}
             <section className="team">
                 <div className="container">
@@ -180,47 +128,28 @@ export default function AboutUs() {
 
                     <div className="team-grid">
                         <div className="team-member">
-                            <div className="member-photo">
-                                <img
-                                    src={ceo}
-                                    alt="CEO"
-                                />
-                            </div>
-                            <h3>Marcos Silva</h3>
-                            <p>CEO & Co-fundador</p>
+                            <h3>Mário Vinícius</h3>
+                            <p>Co-Fundador</p>
                         </div>
 
                         <div className="team-member">
-                            <div className="member-photo">
-                                <img
-                                    src={cto}
-                                    alt="CTO"
-                                />
-                            </div>
-                            <h3>Carla Oliveira</h3>
-                            <p>CTO & Co-fundadora</p>
+                            <h3>Laura Ribeiro</h3>
+                            <p>Co-Fundador</p>
                         </div>
 
                         <div className="team-member">
-                            <div className="member-photo">
-                                <img
-                                    src={coo}
-                                    alt="COO"
-                                />
-                            </div>
-                            <h3>Roberto Santos</h3>
-                            <p>COO</p>
+                            <h3>Thalles Melo</h3>
+                            <p>Co-Fundador</p>
                         </div>
 
                         <div className="team-member">
-                            <div className="member-photo">
-                                <img
-                                    src={headResearch}
-                                    alt="Head of Research"
-                                />
-                            </div>
-                            <h3>Ana Costa</h3>
-                            <p>Diretora de Pesquisa</p>
+                            <h3>João Vieira</h3>
+                            <p>Co-Fundador</p>
+                        </div>
+
+                        <div className="team-member">
+                            <h3>Nicholas Anft </h3>
+                            <p>Co-Fundador</p>
                         </div>
                     </div>
 
@@ -228,68 +157,6 @@ export default function AboutUs() {
                         <a href="#" className="btn btn-outline">
                             Conheça toda a equipe
                         </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* Parceiros */}
-            <section className="partners">
-                <div className="container">
-                    <div className="section-header">
-                        <h2>Nossos Parceiros</h2>
-                        <p>
-                            Trabalhamos com as principais instituições e
-                            empresas do setor para oferecer as melhores
-                            soluções.
-                        </p>
-                    </div>
-
-                    <div className="partners-grid">
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro1}
-                                alt="Parceiro 1"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro2}
-                                alt="Parceiro 2"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img src={parceiro3} alt="Parceiro 3" />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro4}
-                                alt="Parceiro 4"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro5}
-                                alt="Parceiro 5"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro6}
-                                alt="Parceiro 6"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro7}
-                                alt="Parceiro 7"
-                            />
-                        </div>
-                        <div className="partner-logo">
-                            <img
-                                src={parceiro8}
-                                alt="Parceiro 8"
-                            />
-                        </div>
                     </div>
                 </div>
             </section>
