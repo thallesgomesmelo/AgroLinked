@@ -67,7 +67,7 @@ export default function Footer() {
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
-                                    <span>contato@AgroLinked.com.br</span>
+                                    <span>agroliked@gmail.com</span>
                                 </li>
                             </ul>
                         </div>

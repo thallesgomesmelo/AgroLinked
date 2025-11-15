@@ -44,8 +44,7 @@ export default function Start() {
                     <div className="section-header">
                         <h2>Tecnologia que Impulsiona o Agronegócio</h2>
                         <p>
-                            Nossa plataforma oferece soluções completas para
-                            modernizar e otimizar sua produção agrícola.
+                        Desenvolvemos soluções modernas e acessíveis para tornar sua produção agrícola mais eficiente e inteligente.
                         </p>
                     </div>
 

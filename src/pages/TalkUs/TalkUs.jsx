@@ -234,9 +234,9 @@ export default function TalkUs() {
                                     <div className="contact-info-text">
                                         <h3>E-mail</h3>
                                         <p>
-                                            contato@AgroLinked.com.br
+                                            Agroliked@gmail.com
                                             <br />
-                                            suporte@AgroLinked.com.br
+                                        suporte@AgroLiked.com.br
                                         </p>
                                     </div>
                                 </div>
@@ -273,7 +273,7 @@ export default function TalkUs() {
             <section className="faq-section">
                 <div className="container">
                     <div className="section-header">
-                        <h2>Perguntas Frequentes</h2>
+                        <h2>Perguntas Comuns</h2>
                         <p>
                             Encontre respostas para as perguntas mais comuns
                             sobre nossos produtos e serviços.
@@ -307,7 +307,7 @@ export default function TalkUs() {
                         </div>
 
                         <div className="faq-card">
-                            <h3>Vocês oferecem suporte técnico?</h3>
+                            <h3>Oferecemos suporte técnico?</h3>
                             <p>
                                 Sim, oferecemos suporte técnico completo,
                                 incluindo manutenção dos sensores, atualizações
