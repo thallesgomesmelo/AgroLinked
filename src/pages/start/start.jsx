@@ -26,6 +26,14 @@ export default function Start() {
                                 <a href="talkus" className="btn btn-outline">
                                     Fale Conosco
                                 </a>
+                            <a
+                                href="https://youtu.be/gjedqygKJZY"
+                                className="btn btn-outline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                    Assista ao vídeo
+                                </a>                                                     
                             </div>
                         </div>
                         <div className="hero-image">
@@ -149,7 +157,7 @@ export default function Start() {
                     </a>
                     <a href="product" className="btn btn-outline-light">
                         Saiba Mais
-                    </a>
+                    </a>                    
                 </div>
             </CTASection>
         </>
